@@ -27,7 +27,7 @@ getUserPosition() async {
   noti.Notification notification = noti.Notification();
   notification.showNotificationWithoutSound(userLocation);
   position = userLocation;
-  print("uppperrrr   $position");
+
   PostData(position: position).postData();
   TrackingPage(
     p: position,
@@ -62,7 +62,7 @@ class _TrackingPageState extends State<TrackingPage> {
 
   getPos() async {
     positions = await getUserPosition();
-    print("triiggeree $positions");
+
     setState(() {});
   }
 
